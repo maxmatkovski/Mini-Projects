@@ -1,6 +1,6 @@
 // Quick JavaScript Commit to Keep Commit Streak
 
-function managementGrade (){
+function rawScoreCalculation (){
 
     quiz1 = parseInt(prompt('What was your score on Quiz 1? '));
     quiz2 = parseInt(prompt('What was your score on Quiz 2? '));
@@ -18,13 +18,18 @@ function managementGrade (){
 
     evaluation = prompt('Did you fill out the extra credit evaluation?')
     if (evaluation === 'yes' || evaluation === 'Yes'){
-        total = total + 3;
+        total = parseInt(total + 3);
         console.log('Congratulations you received three extra credit points!')
     } else if (evaluation === 'no' || evaluation === 'No'){
         console.log('Sorry you did not earn three extra credit points!')
     } else {
         evaluation = prompt('What was your score on Quiz 3? ');
     }
+
+    return (total);
+}
+
+function gradeCalculation(total){
 
     if (90 <= total < 100){
         grade = 'A';
@@ -38,6 +43,5 @@ function managementGrade (){
         grade = 'Invalid Grade';
     }
 
-
-    return (grade);
+    return(grade);
 }
